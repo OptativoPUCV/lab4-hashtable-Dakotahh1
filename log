@@ -60,3 +60,16 @@ Tue 23 Apr 2024 04:26:16 AM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 f117cef
+Tue 23 Apr 2024 04:31:14 AM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:63:28: error: expected ‘;’ before ‘}’ token
+   63 |     map->current = posicion
+      |                            ^
+      |                            ;
+   64 |   }
+      |   ~                         
+Compilation failed
+45e5c13
