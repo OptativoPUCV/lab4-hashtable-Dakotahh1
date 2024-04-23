@@ -56,6 +56,7 @@ void insertMap(HashMap * map, char * key, void * value) {
           return;
         }
         posicion++;
+        if(posicion==map->capacity) posicion=0;
       }
   }
 }
