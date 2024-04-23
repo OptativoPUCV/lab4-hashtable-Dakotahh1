@@ -55,9 +55,12 @@ void insertMap(HashMap * map, char * key, void * value) {
           map->buckets[posicion]->value=value;
           return;
         }
+        else if(posicion==map->capacity) posicion=0;
         posicion++;
-        if(posicion==map->capacity) posicion=0;
+        
       }
+    map->buckets[posicion]=par;
+    map->size++;
   }
 }
 
