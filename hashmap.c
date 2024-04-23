@@ -47,6 +47,17 @@ void insertMap(HashMap * map, char * key, void * value) {
     map->buckets[posicion]=par;
     map->size++;
   }
+  else
+  {
+    while(map->buckets[posicion]!=NULL)
+      {
+        if(is_equal(map->buckets[posicion]->key,key)){
+          map->buckets[posicion]->value=value;
+          return;
+        }
+        posicion++;
+      }
+  }
 }
 
 void enlarge(HashMap * map) {
